@@ -1,12 +1,14 @@
-import ReactLogo from './assets/react.svg?react';
+import styled from 'styled-components';
+
+const Div = styled.div`
+	text-align: center;
+`;
 
 export const App = () => {
 	return (
-		<div className="container">
-			<h1>Hello World!</h1>
-			<ReactLogo />
-			<hr />
-			<span className="span-year">{new Date().getFullYear()}</span>
-		</div>
+		<Div>
+			<i className="fa fa-camera" aria-hidden="true"></i>
+			<div>123</div>
+		</Div>
 	);
 };

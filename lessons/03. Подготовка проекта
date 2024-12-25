@@ -1,0 +1,7 @@
+Установка пакетов
+Установка json-server:
+react-practice-blog-app % npm i -g json-sever
+Установка модулей:
+react-practice-blog-app % npm i styled-components prop-types react-hook-form yup react-router redux redux-thunk react-redux
+Подключаем шрифты иконок:
+https://fontawesome.ru/ или аналог
