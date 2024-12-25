@@ -1,16 +1,10 @@
-const generateDate = () =>
-	new Date(Math.random() * 1000000000000 + 1999999999999)
-		.toISOString()
-		.substr(0, 16)
-		.replace('T', ' ');
+import { getUser } from './get-user.js';
+import { addUser } from './add-user.js';
+import { createSession } from './create-session.js';
 
 export const server = {
 	async authorize(authLogin, authPassword) {
-		const users = await fetch('http://localhost:3000/users').then((loadedUsers) =>
-			loadedUsers.json(),
-		);
-
-		const user = users.find(({ login }) => login === authLogin);
+		const user = await getUser(authLogin);
 
 		if (!user) {
 			return { error: 'User not found', res: null };
@@ -20,56 +14,23 @@ export const server = {
 			return { error: 'Wrong password', res: null };
 		}
 
-		const session = {
-			logout() {
-				Object.key(session).forEach((key) => delete session[key]);
-			},
-			removeComment() {
-				console.log('removeComment');
-			},
-		};
-
 		return {
 			error: null,
-			res: session,
+			res: createSession(user.role_id),
 		};
 	},
 	async register(regLogin, regPassword) {
-		const users = await fetch('http://localhost:3000/users').then((loadedUsers) =>
-			loadedUsers.json(),
-		);
-
-		const user = users.find(({ login }) => login === regLogin);
+		const user = await getUser(regLogin);
 
 		if (user) {
 			return { error: 'Такой логин уже занят', res: null };
 		}
 
-		await fetch('http://localhost:3000/users', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json;charset=utf-8',
-			},
-			body: JSON.stringify({
-				login: regLogin,
-				password: regPassword,
-				registered_at: generateDate(),
-				role_id: 2,
-			}),
-		});
-
-		const session = {
-			logout() {
-				Object.key(session).forEach((key) => delete session[key]);
-			},
-			removeComment() {
-				console.log('removeComment');
-			},
-		};
+		const newUser = await addUser(regLogin, regPassword);
 
 		return {
 			error: null,
-			res: session,
+			res: createSession(newUser.role_id),
 		};
 	},
 };
