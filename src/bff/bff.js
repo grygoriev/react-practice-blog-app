@@ -1,3 +1,9 @@
+const generateDate = () =>
+	new Date(Math.random() * 1000000000000 + 1999999999999)
+		.toISOString()
+		.substr(0, 16)
+		.replace('T', ' ');
+
 export const server = {
 	async authorize(authLogin, authPassword) {
 		const users = await fetch('http://localhost:3000/users').then((loadedUsers) =>
@@ -13,6 +19,44 @@ export const server = {
 		if (user.password !== authPassword) {
 			return { error: 'Wrong password', res: null };
 		}
+
+		const session = {
+			logout() {
+				Object.key(session).forEach((key) => delete session[key]);
+			},
+			removeComment() {
+				console.log('removeComment');
+			},
+		};
+
+		return {
+			error: null,
+			res: session,
+		};
+	},
+	async register(regLogin, regPassword) {
+		const users = await fetch('http://localhost:3000/users').then((loadedUsers) =>
+			loadedUsers.json(),
+		);
+
+		const user = users.find(({ login }) => login === regLogin);
+
+		if (user) {
+			return { error: 'Такой логин уже занят', res: null };
+		}
+
+		await fetch('http://localhost:3000/users', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json;charset=utf-8',
+			},
+			body: JSON.stringify({
+				login: regLogin,
+				password: regPassword,
+				registered_at: generateDate(),
+				role_id: 2,
+			}),
+		});
 
 		const session = {
 			logout() {
