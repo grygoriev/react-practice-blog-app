@@ -2,7 +2,7 @@
 	"users": [
 		{
 			"id": "001",
-			"login": "Anton",
+			"login": "anton",
 			"password": "qwerty123",
 			"registered_at": "2045-06-21",
 			"role_id": 0
