@@ -3,7 +3,7 @@
     {
       "id": "001",
       "login": "anton",
-      "password": "qwerty123",
+      "password": "qwerty",
       "registered_at": "2045-06-21",
       "role_id": 0
     },
@@ -12,32 +12,25 @@
       "login": "ivan",
       "password": "qwerty",
       "registered_at": "2037-11-11 20:56",
-      "role_id": 2
-    },
-    {
-      "id": "3ec5",
-      "login": "ivan2",
-      "password": "qwerty",
-      "registered_at": "2044-01-14 00:59",
-      "role_id": 2
+      "role_id": 1
     }
   ],
   "roles": [
     {
       "id": 0,
-      "role": "Администратор"
+      "name": "Администратор"
     },
     {
       "id": 1,
-      "role": "Модератор"
+      "name": "Модератор"
     },
     {
       "id": 2,
-      "role": "Читатель"
+      "name": "Читатель"
     },
     {
       "id": 3,
-      "role": "Гость"
+      "name": "Гость"
     }
   ],
   "posts": [
