@@ -1,5 +1,6 @@
 import {
 	authorize,
+	fetchPost,
 	fetchRoles,
 	fetchUsers,
 	logout,
@@ -16,4 +17,5 @@ export const server = {
 	fetchRoles,
 	updateUserRole,
 	removeUser,
+	fetchPost,
 };
