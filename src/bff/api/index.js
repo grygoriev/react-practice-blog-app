@@ -12,3 +12,4 @@ export * from './add-session.js';
 export * from './get-session.js';
 export * from './delete-session.js';
 export * from './update-post.js';
+export * from './delete-post.js';
