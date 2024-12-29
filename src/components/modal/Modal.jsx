@@ -3,7 +3,7 @@ import { Button } from '../button/Button.jsx';
 import { useSelector } from 'react-redux';
 import {
 	selectModalIsOpen,
-	selectModalOnCansel,
+	selectModalOnCancel,
 	selectModalOnConfirm,
 	selectModalText,
 } from '../../selectors';
@@ -12,7 +12,7 @@ const ModalContainer = ({ className }) => {
 	const text = useSelector(selectModalText);
 	const isOpen = useSelector(selectModalIsOpen);
 	const onConfirm = useSelector(selectModalOnConfirm);
-	const onCancel = useSelector(selectModalOnCansel);
+	const onCancel = useSelector(selectModalOnCancel);
 
 	if (!isOpen) {
 		return null;

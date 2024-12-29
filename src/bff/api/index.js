@@ -11,3 +11,4 @@ export * from './delete-comment.js';
 export * from './add-session.js';
 export * from './get-session.js';
 export * from './delete-session.js';
+export * from './update-post.js';

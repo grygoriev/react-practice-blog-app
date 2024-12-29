@@ -4,6 +4,6 @@ export * from './select-user-id.js';
 export * from './select-user-session.js';
 export * from './select-post.js';
 export * from './select-modal-is-open.js';
-export * from './select-modal-on-cansel.js';
+export * from './select-modal-on-cancel.js';
 export * from './select-modal-on-confirm.js';
 export * from './select-modal-text.js';
