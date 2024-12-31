@@ -28,8 +28,12 @@ const UsersContainer = ({ className }) => {
 					return;
 				}
 
+				const formattedRoles = rolesRes.res.map(({ id, name }) => ({
+					id: Number(id),
+					name,
+				}));
+				setRoles(formattedRoles);
 				setUsers(usersRes.res);
-				setRoles(rolesRes.res);
 			},
 		);
 	}, [requestServer, shouldUpdateUserLists, userRole]);
@@ -62,7 +66,7 @@ const UsersContainer = ({ className }) => {
 							registeredAt={registeredAt}
 							roleId={roleId}
 							roles={roles.filter(
-								({ id: roleId }) => roleId !== ROLE.GUEST,
+								({ id: roleId }) => Number(roleId) !== ROLE.GUEST,
 							)}
 							onUserRemove={() => onUserRemove(id)}
 						/>
