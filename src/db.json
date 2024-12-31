@@ -13,6 +13,13 @@
       "password": "qwerty",
       "registered_at": "2037-11-11 20:56",
       "role_id": 1
+    },
+    {
+      "login": "petr",
+      "password": "qwerty",
+      "registered_at": "2034-04-26 20:45",
+      "role_id": 2,
+      "id": "BvQHXVC"
     }
   ],
   "roles": [
@@ -149,13 +156,6 @@
       "published_at": "2049-06-18 20:10"
     },
     {
-      "id": "31fb",
-      "author_id": "001",
-      "post_id": "001",
-      "content": "dfdfdfd",
-      "published_at": "2047-05-08 03:35"
-    },
-    {
       "id": "70f5",
       "author_id": "001",
       "post_id": "010",
@@ -175,7 +175,26 @@
       "content": "Да уж",
       "published_at": "2034-08-10 06:21",
       "id": "OFSOlx2"
+    },
+    {
+      "author_id": "BvQHXVC",
+      "post_id": "003",
+      "content": "коммент от Петра",
+      "published_at": "2057-03-27 17:51",
+      "id": "g3SjdnP"
     }
   ],
-  "sessions": []
+  "sessions": [
+    {
+      "hash": "0.04845618886613123343920506158610805869102478027344",
+      "user": {
+        "id": "001",
+        "login": "anton",
+        "password": "qwerty",
+        "registeredAt": "2045-06-21",
+        "roleId": 0
+      },
+      "id": 1
+    }
+  ]
 }
