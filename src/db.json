@@ -168,19 +168,14 @@
       "post_id": "010",
       "content": "fdffgf",
       "published_at": "2064-04-25 14:36"
+    },
+    {
+      "author_id": "001",
+      "post_id": "002",
+      "content": "Да уж",
+      "published_at": "2034-08-10 06:21",
+      "id": "OFSOlx2"
     }
   ],
-  "sessions": [
-    {
-      "id": "b439",
-      "hash": "0.67876788124157516612910967523930594325065612792969",
-      "user": {
-        "id": "001",
-        "login": "anton",
-        "password": "qwerty",
-        "registeredAt": "2045-06-21",
-        "roleId": 0
-      }
-    }
-  ]
+  "sessions": []
 }

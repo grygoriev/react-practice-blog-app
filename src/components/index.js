@@ -4,6 +4,7 @@ export * from './footer/Footer.jsx';
 export * from './input/Input.jsx';
 export * from './button/Button.jsx';
 export * from './h2/H2.jsx';
-export * from './content/Content.jsx';
+export * from './private-content/PrivateContent.jsx';
 export * from './auth-form-error/auth-form-error.js';
 export * from './modal/Modal.jsx';
+export * from './error/Error.jsx';
