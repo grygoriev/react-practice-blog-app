@@ -1,0 +1,10 @@
+### POST add comments to posts
+POST http://localhost:3001/posts/6798df4d781077207b636862/comments
+Content-Type: application/json
+
+{
+    "content": "Comment 3"
+}
+
+### DELETE comments
+DELETE http://localhost:3001/posts/6798df4d781077207b636862/comments/6798ec188c8f0d6ada6d7bbd

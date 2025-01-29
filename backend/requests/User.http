@@ -1,0 +1,34 @@
+### POST request register
+POST http://localhost:3001/register
+Content-Type: application/json
+
+{
+    "login": "igor",
+    "password": "test123"
+}
+
+### POST request login
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "login": "test",
+    "password": "test123"
+}
+
+### POST request logout
+POST http://localhost:3001/logout
+
+### GET users
+GET http://localhost:3001/users
+
+### PATCH user
+PATCH http://localhost:3001/users/6797e9d7ee40b0a84c236636
+Content-Type: application/json
+
+{
+    "roleId": 0
+}
+
+### DELETE user
+DELETE http://localhost:3001/users/6797e9d7ee40b0a84c236636
